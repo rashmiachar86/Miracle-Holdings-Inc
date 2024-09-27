@@ -1,7 +1,7 @@
 terraform {
 
   backend "s3" {
-    bucket = "miracleholdings-inc"
+    bucket = "tfmigrate-rashmi"
     key    = "terraform-states/invest-track/terraform.tfstate"
     region = "us-west-2"
   }
@@ -21,7 +21,7 @@ provider "aws" {
 resource "aws_security_group" "Critical-Security-Group" {
   name        = "Critical-Security-Group"
   description = "Open access within this region"
-  vpc_id      = "vpc-0a370eb440da35c29"
+  vpc_id      = "vpc-0b0ffd8a97bc1e6c4"
 
   ingress {
     from_port   = 0

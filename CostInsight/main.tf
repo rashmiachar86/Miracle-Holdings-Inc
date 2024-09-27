@@ -1,7 +1,7 @@
 terraform {
 
   backend "s3" {
-    bucket               = "miracleholdings-inc"
+    bucket               = "tfmigrate-rashmi"
     workspace_key_prefix = "terraform-states/cost-insight"
     key                  = "terraform.tfstate"
     region               = "us-west-2"
@@ -17,7 +17,6 @@ terraform {
 provider "aws" {
   region = "us-west-2"
 }
-
 
 module "shared_module_consumer" {
   source           = "../Shared-Module"
